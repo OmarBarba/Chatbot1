@@ -2,7 +2,7 @@ import sqlite3
 import json
 from datetime import datetime
 
-timeframe = '2015-05'
+timeframe = '2015-01'
 sql_transaction = []
 
 connection = sqlite3.connect('{}.db'.format(timeframe))
@@ -90,7 +90,7 @@ if __name__ == '__main__':
     row_counter = 0
     paired_rows = 0
 
-    with open('J:/chatdata/reddit_data/{}/RC_{}'.format(timeframe.split('-')[0],timeframe), buffering=1000) as f:
+    with open('D:\documents\PROGRA\CHAT/Chatbot/{}/RC_{}'.format(timeframe.split('-')[0],timeframe), buffering=1000) as f:
         for row in f:
             row_counter += 1
             row = json.loads(row)
